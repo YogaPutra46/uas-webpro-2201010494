@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bangun Ruang</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="assets/css/bangun-ruang.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="home.php">Matematika | Prayoga</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="home.html">
+                                <i class="bi bi-house-door"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perhitungan.html">
+                                <i class="bi bi-calculator-fill"></i>
+                                Perhitungan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bangun-datar.html">
+                                <i class="bi bi-hexagon"></i>
+                                Bangun Datar
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="bangun-ruang.html">
+                                <i class="bi bi-box"></i>
+                                Bangun Ruang
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="start.html">
+                                <i class="bi bi-box-arrow-left"></i>
+                                Keluar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h2 class="h3 rainbow-text">Bangun Ruang</h2>
+                    <p class="text text-danger">Ayo mulai menghitung dengan caranya klik gambar</p>
+                </div>
+                <div class="row justify-content-center background">
+                    <div class="col-md-4">
+                        <h4 class="card-title">KUBUS</h4>
+                        <div class="card">
+                            <a class="Kubus foto-container" onclick="showForm('Kubus')">
+                                <img src="assets/picture/kubus.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Kubus-form">
+                                    <div class="input-container">
+                                        <input type="number" class="s" placeholder="" required>
+                                        <label>Sisi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungKubus">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">BALOK</h4>
+                        <div class="card">
+                            <a class="Balok foto-container" onclick="showForm('Balok')">
+                                <img src="assets/picture/balok.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Balok-form">
+                                    <div class="input-container">
+                                        <input type="number" class="p" placeholder="" required>
+                                        <label>Panjang</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="l" placeholder="" required>
+                                        <label>Lebar</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="t" placeholder="" required>
+                                        <label>Tinggi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungBalok">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">BOLA</h4>
+                        <div class="card">
+                            <a class="Bola foto-container" onclick="showForm('Bola')">
+                                <img src="assets/picture/bola.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Bola-form">
+                                    <div class="input-container">
+                                        <input type="number" class="r" placeholder="" required>
+                                        <label>Jari-Jari</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungBola">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">SILINDER</h4>
+                        <div class="card">
+                            <a class="Silinder foto-container" onclick="showForm('Silinder')">
+                                <img src="assets/picture/silinder.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Silinder-form">
+                                    <div class="input-container">
+                                        <input type="number" class="r" placeholder="" required>
+                                        <label>Jari-Jari</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="t" placeholder="" required>
+                                        <label>Tinggi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungSilinder">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">KERUCUT</h4>
+                        <div class="card">
+                            <a class="Kerucut foto-container" onclick="showForm('Kerucut')">
+                                <img src="assets/picture/kerucut.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Kerucut-form">
+                                    <div class="input-container">
+                                        <input type="number" class="r" placeholder="" required>
+                                        <label>Jari-Jari</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="s" placeholder="" required>
+                                        <label>Sisi Miring</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="t" placeholder="" required>
+                                        <label>Tinggi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungKerucut">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">PRISMA</h4>
+                        <div class="card">
+                            <a class="Prisma foto-container" onclick="showForm('Prisma')">
+                                <img src="assets/picture/prisma.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Prisma-form">
+                                    <div class="input-container">
+                                        <input type="number" class="la" placeholder="" required>
+                                        <label>Luas Alas</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="t" placeholder="" required>
+                                        <label>Tinggi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungPrisma">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">LIMAS</h4>
+                        <div class="card">
+                            <a class="Limas foto-container" onclick="showForm('Limas')">
+                                <img src="assets/picture/limas.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Limas-form">
+                                    <div class="input-container">
+                                        <input type="number" class="la" placeholder="" required>
+                                        <label>Luas Alas</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="t" placeholder="" required>
+                                        <label>Tinggi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungLimas">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">TABUNG</h4>
+                        <div class="card">
+                            <a class="Tabung foto-container" onclick="showForm('Tabung')">
+                                <img src="assets/picture/tabung.jpg" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Tabung-form">
+                                    <div class="input-container">
+                                        <input type="number" class="r" placeholder="" required>
+                                        <label>Jari-Jari</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="t" placeholder="" required>
+                                        <label>Tinggi</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungTabung">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="assets/jquery/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/bangun-ruang.js"></script>
+</body>
+
+</html>

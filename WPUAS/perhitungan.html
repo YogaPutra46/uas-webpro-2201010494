@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perhitungan</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="assets/css/perhitungan.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="home.php">Matematika | Prayoga</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="home.html">
+                                <i class="bi bi-house-door"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="perhitungan.html">
+                                <i class="bi bi-calculator-fill"></i>
+                                Perhitungan
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bangun-datar.html">
+                                <i class="bi bi-hexagon"></i>
+                                Bangun Datar
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bangun-ruang.html">
+                                <i class="bi bi-box"></i>
+                                Bangun Ruang
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="start.html">
+                                <i class="bi bi-box-arrow-left"></i>
+                                Keluar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h2 class="h3 rainbow-text"> PERHITUNGAN</h2>
+                    <p class="text text-danger">Ayo mulai menghitung dengan caranya klik gambar</p>
+                </div>
+                <div class="row justify-content-center background">
+                    <div class="col-md-4">
+                        <h4 class="card-title">PERTAMBAHAN</h4>
+                        <div class="card">
+                            <a class="Tambah foto-container" onclick="showForm('Tambah')">
+                                <img src="assets/picture/tambah.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Tambah-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a1" placeholder="" required>
+                                        <label>Angka 1</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="a2" placeholder="" required>
+                                        <label>Angka 2</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungTambah">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">PENGURANGAN</h4>
+                        <div class="card">
+                            <a class="Kurang foto-container" onclick="showForm('Kurang')">
+                                <img src="assets/picture/kurang.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Kurang-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a1" placeholder="" required>
+                                        <label>Angka 1</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="a2" placeholder="" required>
+                                        <label>Angka 2</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungKurang">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">PERKALIAN</h4>
+                        <div class="card">
+                            <a class="Kali foto-container" onclick="showForm('Kali')">
+                                <img src="assets/picture/kali.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Kali-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a1" placeholder="" required>
+                                        <label>Angka 1</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="a2" placeholder="" required>
+                                        <label>Angka 2</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungKali">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">PEMBAGIAN</h4>
+                        <div class="card">
+                            <a class="Bagi foto-container" onclick="showForm('Bagi')">
+                                <img src="assets/picture/bagi.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Bagi-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a1" placeholder="" required>
+                                        <label>Angka 1</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="a2" placeholder="" required>
+                                        <label>Angka 2</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungBagi">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">PANGKAT</h4>
+                        <div class="card">
+                            <a class="Pangkat foto-container" onclick="showForm('Pangkat')">
+                                <img src="assets/picture/pangkat.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Pangkat-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a1" placeholder="" required>
+                                        <label>Angka</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="a2" placeholder="" required>
+                                        <label>Pangkat</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungPangkat">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">AKAR</h4>
+                        <div class="card">
+                            <a class="Akar foto-container" onclick="showForm('Akar')">
+                                <img src="assets/picture/akar.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Akar-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a" placeholder="" required>
+                                        <label>Angka</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungAkar">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="card-title">PERSENTASE</h4>
+                        <div class="card">
+                            <a class="Persen foto-container" onclick="showForm('Persen')">
+                                <img src="assets/picture/persen.png" class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-body" style="display: none;">
+                                <div id="Persen-form">
+                                    <div class="input-container">
+                                        <input type="number" class="a1" placeholder="" required>
+                                        <label>Angka 1</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="number" class="a2" placeholder="" required>
+                                        <label>Angka 2</label>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="HitungPersen">Hitung</button>
+                                        <button type="button" class="back">Back</button>
+                                    </div>
+                                    <div class="result-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="assets/jquery/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/perhitungan.js"></script>
+
+</body>
+
+</html>
