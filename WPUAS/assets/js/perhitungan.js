@@ -107,31 +107,6 @@ $(document).ready(function () {
     $(this).closest('.card-body').find('.result-container').css('display', 'block');
   });
 
-  // Modulo
-  $('.Modulo').click(function () {
-    var cardBody = $(this).next('.card-body');
-    cardBody.slideDown();
-    cardBody.prev('.card-img-top').addClass('hide');
-    setTimeout(function () {
-      cardBody.show().addClass('open').removeClass('hide');
-    }, 300);
-  });
-
-  $('.HitungModulo').click(function () {
-    var a1 = $(this).closest('.card-body').find('.a1').val();
-    var a2 = $(this).closest('.card-body').find('.a2').val();
-    var hasil = a1 % a2;
-
-    var tx = "<div class='result-title'>Hasil Perhitungan:</div>";
-    tx += "<div class='result-item'><span class='result-label'>Angka 1:</span><span class='result-value'>" + a1 + "</span></div>";
-    tx += "<div class='result-item'><span class='result-label'>Angka 2:</span><span class='result-value'>" + a2 + "</span></div>";
-    tx += "<div class='result-item'><span class='result-label'>Hasil:</span><span class='result-value'>" + hasil + "</span></div>";
-
-    $(this).closest('.card').find('.result-container').html(tx);
-    $(this).closest('.card-body').find('.result-container').html(tx);
-    $(this).closest('.card-body').find('.result-container').css('display', 'block');
-  });
-
   // Pangkat
   $('.Pangkat').click(function () {
     var cardBody = $(this).next('.card-body');
